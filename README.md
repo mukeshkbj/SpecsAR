@@ -33,7 +33,21 @@ The preview can't see a real fuse box, so:
 ## Repo contents
 - `Assets/` — the Lens (scripts, prefabs, materials)
 - `devpost/design-brief.md` — the plan written by the `plan-lens` skill
-- LEAF tests for each done criterion (see the brief)
+- LEAF tests for each done criterion in Assets/Scripts/Leaf/ (LEAF v2.0.2)
+- progress.md - build log from CLAD
+
+## Test results
+All 5 done criteria from the design brief pass as LEAF scenarios in the Lens Studio preview, driven by simulated pinches:
+
+| Done criterion | LEAF scenario | Result |
+|---|---|---|
+| Pulsing dot on the RCD opens the first step card | dc1-start-dot-opens-card | PASS |
+| Breakers walked one at a time, current one highlighted, others dimmed | dc2-walk-one-at-a-time | PASS |
+| Kitchen sockets back on trips the RCD, breaker turns amber, result card shows | dc3-kitchen-trips-fault | PASS |
+| Result card shows the next step and 'Start again' resets the scene | dc4-result-start-again | PASS |
+| Safety button replaces everything with 'Stop - call an electrician' | dc5-safety-stop | PASS |
+
+Not directly tested: the clunk and chime sounds (asserted through the state change that plays them), and how it feels on real glasses.
 
 ## Built with
 Lens Studio · SPECS · Spectacles Interaction Kit · CLAD (`ls-clad`) · Lens Studio MCP · Claude Code · Devpost Learn skill pack

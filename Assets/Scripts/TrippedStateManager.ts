@@ -196,9 +196,11 @@ export class TrippedStateManager extends BaseScriptComponent {
 
   private positionCardAbove(card: TrippedCardUI, sw: TrippedSwitch): void {
     const p = sw.getSceneObject().getTransform().getWorldPosition()
-    // Keep the ~18 cm card inside the forward view while staying near its breaker.
-    const x = Math.max(-6, Math.min(8, p.x))
-    card.getSceneObject().getTransform().setWorldPosition(new vec3(x, p.y + 12, p.z + 2))
+    // Sit the ~18 cm card just above its own breaker: track the breaker's x (clamped only
+    // enough to keep the card inside the forward view) and lift it a little, so it reads as
+    // belonging to that switch instead of floating centre-top with its title out of frame.
+    const x = Math.max(-18, Math.min(18, p.x))
+    card.getSceneObject().getTransform().setWorldPosition(new vec3(x, p.y + 8, p.z + 2))
   }
 
   private setUnitVisible(v: boolean): void {

@@ -1,8 +1,7 @@
 // Drives the Tripped experience the way a user's pinch does: every interaction below resolves
 // a live SIK Interactable and triggers it (hover -> select -> release). The state manager reacts
 // to the switches' onToggle, the dot's onPinch, and the UIKit buttons' onTriggerUp exactly as in
-// preview. A positive eventTimeoutMs makes a non-converging interaction fail loudly instead of
-// hanging — an interaction that will not drive is itself a finding.
+// preview. LEAF's per-scenario timeout guards a non-converging interaction from hanging.
 
 import {DefaultLeafInteractor} from "Leaf.lspkg/Interactors/interactor/DefaultLeafInteractor"
 import {findInteractableByName, getInteractables} from "Leaf.lspkg/Interactors/InteractableUtils"
@@ -13,7 +12,6 @@ const SETTLE_MS = 350
 export class TrippedLeafInteractor extends DefaultLeafInteractor {
   constructor() {
     super("TrippedLeafInteractor")
-    this.eventTimeoutMs = 5000
   }
 
   // Pinch a switch / the RCD dot / the safety button — all carry their Interactable on the
