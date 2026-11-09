@@ -1,0 +1,52 @@
+- !<AssetImportMetadata/2bb4009b-fe1a-4981-9d2f-40181e6d7560>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> e23db248-fcba-42f8-b571-1549f418663f
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> e23db248-fcba-42f8-b571-1549f418663f
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> ff37972d-7d34-48d7-9c48-008aaff716b4
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/ff37972d-7d34-48d7-9c48-008aaff716b4>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 69727cad-3aec-4098-9fd4-96049ce2fb2c
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    baseSize: false
+    pulseSpeed: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - baseSize: 1.600000
+      pulseSpeed: !<float> 5.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float baseSize = 1.6 {"hint":"Base diameter of the dot in cm.", "widget":"slider", "min":0.6, "max":4, "step":0.1}'
+    - '// @input float pulseSpeed = 5 {"hint":"Pulse speed (radians/sec).", "widget":"slider", "min":1, "max":12, "step":0.5}'
+    - '// @ui {"widget":"group_end"}'

@@ -1,0 +1,55 @@
+- !<AssetImportMetadata/d5717c04-db4e-4298-9890-9f1b7935f075>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 4cd60a7b-9d6e-4caf-aa87-8578474f2c41
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 4cd60a7b-9d6e-4caf-aa87-8578474f2c41
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> dedd798b-1b0c-4616-850d-a2191e27af64
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/dedd798b-1b0c-4616-850d-a2191e27af64>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 1cf05043-26b3-4ae7-9e13-44ce1d76880a
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    actionIcon: false
+    cardWidth: false
+    textColor: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - actionIcon: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      cardWidth: !<float> 0.000000
+      textColor: !<Vec4> {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input Asset.Texture actionIcon {"hint":"Icon shown on the action button (e.g. check for the tick, restart for Start again)."}'
+    - '// @input float cardWidth {"hint":"Width of the card surface in cm.", "widget":"slider", "min":10, "max":30, "step":0.5}'
+    - '// @input vec4 textColor = {1,1,1,1} {"hint":"Primary text color (keep light — additive display renders black transparent).", "widget":"color"}'
+    - '// @ui {"widget":"group_end"}'

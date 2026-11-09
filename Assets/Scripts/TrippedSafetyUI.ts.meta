@@ -1,0 +1,52 @@
+- !<AssetImportMetadata/35fe286d-5bc8-44ee-989b-361f96c04002>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 39126569-694c-400a-8788-f114b7548808
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 39126569-694c-400a-8788-f114b7548808
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 6f4e95ac-0cd5-42b7-a0e5-ccaac9e98f79
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/6f4e95ac-0cd5-42b7-a0e5-ccaac9e98f79>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 70894769-002d-44ba-88ab-599ff75b7254
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    accentColor: false
+    safetyLabel: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - safetyLabel: "Smell burning / box hot?"
+      accentColor: !<Vec4> {x: 1.000000, y: 0.720000, z: 0.200000, w: 1.000000}
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input string safetyLabel = "Smell burning / box hot?" {"hint":"Safety button label — kept always visible at the edge of the unit."}'
+    - '// @input vec4 accentColor = {1,0.72,0.2,1} {"hint":"Amber accent used for the safety button label and stop title.", "widget":"color"}'
+    - '// @ui {"widget":"group_end"}'

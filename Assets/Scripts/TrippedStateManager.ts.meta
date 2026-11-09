@@ -1,0 +1,77 @@
+- !<AssetImportMetadata/80dbc0a6-d38e-4912-acc4-e0cca985825b>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> f1c07068-8ba1-4961-a8b5-f758f09e526e
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> f1c07068-8ba1-4961-a8b5-f758f09e526e
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 47657c03-69cc-410f-b73f-0f53edb813d2
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/47657c03-69cc-410f-b73f-0f53edb813d2>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 4ffa239a-a688-4480-a90f-d945e2be40c8
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    audio: false
+    breakers: false
+    coachCard: false
+    debugColliders: false
+    dot: false
+    rcd: false
+    resultCard: false
+    safety: false
+    unitRoot: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - unitRoot: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rcd: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      breakers: !<MappingBased.AssignableType_2[]>
+        []
+      dot: !<MappingBased.AssignableType_3> 00000000-0000-0000-0000-000000000000
+      coachCard: !<MappingBased.AssignableType_4> 00000000-0000-0000-0000-000000000000
+      resultCard: !<MappingBased.AssignableType_5> 00000000-0000-0000-0000-000000000000
+      safety: !<MappingBased.AssignableType_6> 00000000-0000-0000-0000-000000000000
+      audio: !<MappingBased.AssignableType_7> 00000000-0000-0000-0000-000000000000
+      debugColliders: false
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"References"}'
+    - '// @input SceneObject unitRoot {"hint":"The movable unit group (body + switches + dot + cards). Hidden in EMERGENCY."}'
+    - '// @input AssignableType_1 rcd {"hint":"The RCD / main switch (left)."}'
+    - '// @input AssignableType_2[] breakers {"hint":"The six breakers in physical order: Upstairs lights, Downstairs lights, Kitchen sockets, Upstairs sockets, Downstairs sockets, Cooker."}'
+    - '// @input AssignableType_3 dot {"hint":"The pulsing RCD dot."}'
+    - '// @input AssignableType_4 coachCard {"hint":"The coaching (instruction) card."}'
+    - "// @input AssignableType_5 resultCard {\"hint\":\"The 'Found it' result card.\"}"
+    - '// @input AssignableType_6 safety {"hint":"Safety button + emergency STOP overlay."}'
+    - '// @input AssignableType_7 audio {"hint":"SFX helper (tick / clunk / chime)."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input bool debugColliders {"hint":"Wireframe every collider for hit-zone debugging (takes effect on preview restart)."}'
+    - '// @ui {"widget":"group_end"}'

@@ -1,0 +1,52 @@
+- !<AssetImportMetadata/884355cb-bae5-47d7-9c8f-0c41e2e2348b>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> fe3e21f7-8a81-42c6-8420-5c8b640b50b3
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> fe3e21f7-8a81-42c6-8420-5c8b640b50b3
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 241f777e-2757-4771-8564-d9250638a9e2
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/241f777e-2757-4771-8564-d9250638a9e2>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: ce06681c-5eb0-49ab-8cb1-70f7e837c258
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    circuitName: false
+    debugCollider: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - circuitName: Breaker
+      debugCollider: false
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - "// @input string circuitName = \"Breaker\" {\"hint\":\"Circuit name shown by coaching cards (e.g. 'Kitchen sockets'). Also identifies the switch in the hierarchy.\"}"
+    - "// @input bool debugCollider {\"hint\":\"Show this switch's collider as a wireframe for hit-zone debugging.\"}"
+    - '// @ui {"widget":"group_end"}'

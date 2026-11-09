@@ -4,6 +4,10 @@
     - !<own> 00000000-0000-0065-0000-000000000064
     - !<own> 0005641c-028d-459a-0000-000000014b4d
     - !<own> f5d74682-203a-4970-81ea-9fa7b88c96bb
+    - !<own> c53c6ddc-7a46-434a-915a-b9ce0bdf4d7b
+    - !<own> 94bee86f-a3d3-4c1a-a5bf-a3b5f0a5513b
+    - !<own> a8d0bff3-d59e-49c5-810f-b7ab459b47c3
+    - !<own> 39d0470c-983e-4d74-a082-378e4f6af3ee
   layers: !<Layers/267ee9a7-aff2-4f9d-9a49-f71214747d03>
     userLayers:
       - id: 1
@@ -119,7 +123,6 @@
   EnvMapRotation: 0.000000
   DiffuseEnvTexture: !<reference> 00000000-0000-0000-0000-000000000000
   SpecularEnvTexture: !<reference> 00000000-0000-0000-0000-000000000000
-  SpecularCubemapTexture: !<reference> 00000000-0000-0000-0000-000000000000
   Color: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
   DynamicEnvInputTexture: !<reference> 00000000-0000-0000-0000-000000000000
@@ -167,7 +170,6 @@
   EnvMapRotation: 0.000000
   DiffuseEnvTexture: !<reference> 2013a19b-93c1-4f21-b7ea-876a33550c7b
   SpecularEnvTexture: !<reference> d795fd46-e16b-4cb9-8dfb-4ef227298f7a
-  SpecularCubemapTexture: !<reference> 00000000-0000-0000-0000-000000000000
   Color: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
   DynamicEnvInputTexture: !<reference> 00000000-0000-0000-0000-000000000000
@@ -498,6 +500,40 @@
     - !<own> a6af4948-9adc-4052-ae22-db902dd2764e
   Components:
     []
+- !<SceneObject/169e4830-99b6-4afd-9134-cbb498b7938b>
+  PrefabRemaps:
+    []
+  Name: Breaker_UpstairsSockets
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 5.200000, y: 0.000000, z: 1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> abdd40e3-3b42-4d0a-8335-82e434da9f63
+  Components:
+    - !<own> 4aaa5ea6-41dd-4b14-a65f-490c6b44b920
+- !<ScriptComponent/180a5800-aecf-4d42-850e-b8732834ff8e>
+  PrefabRemaps:
+    []
+  Name: TrippedCardUI
+  Enabled: true
+  ScriptAsset: !<reference> 4cd60a7b-9d6e-4caf-aa87-8578474f2c41
+  ScriptInputsDefault:
+    cardWidth: true
+    textColor: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      actionIcon: !<reference.Texture> 2c582e44-d926-49a5-862e-101021750ecd
+      cardWidth: !<float> 0.000000
+      textColor: !<Vec4> {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/181c239f-175e-4912-94fc-d37a2599b2d6>
   PrefabRemaps:
     []
@@ -548,6 +584,36 @@
     []
   Components:
     - !<own> e1031f7e-3474-489f-a529-282f7192f812
+- !<SceneObject/20f037f9-49de-437c-a972-cc22857ed2f3>
+  PrefabRemaps:
+    []
+  Name: Lever
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.600000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 2.400000, y: 4.500000, z: 1.200000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> d3a04821-3354-4ab6-ad0f-0c53dabb3d0b
+- !<SceneObject/21c1e7b7-6b08-4083-bacd-787bd3cc3ab1>
+  PrefabRemaps:
+    []
+  Name: Breaker_Cooker
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 14.000000, y: 0.000000, z: 1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 61d63b30-352c-4c11-bd62-29214e2d63a2
+  Components:
+    - !<own> 3345714e-91e0-4e34-8768-3a87003e9cb1
 - !<SceneObject/23018601-1041-4785-a20e-9ad5ab722f95>
   PrefabRemaps:
     []
@@ -593,6 +659,22 @@
     []
   Components:
     []
+- !<ScriptComponent/2560ef20-81d6-4cfa-85ae-d78fe4bf2c3e>
+  PrefabRemaps:
+    []
+  Name: TrippedAudio
+  Enabled: true
+  ScriptAsset: !<reference> ea341d56-531d-4cb5-874b-2036c1aa7ffc
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      {}
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/264571d0-f879-411b-8deb-ff6d9921317f>
   PrefabRemaps:
     []
@@ -695,6 +777,36 @@
     ring-3_end_end_end: !<reference> b93dfa60-41bd-4999-ac0f-4b2f1df2bdaf
     thumb-3_end_end_end_end: !<reference> 08e3cc22-f2e1-49fb-9ddc-145fe6547ce3
     pinky-3_end_end: !<reference> d08269e3-acd4-4156-b5b9-477ca259611d
+- !<ScriptComponent/2aee000f-2e7d-4d19-92b7-2df06fdbdf58>
+  PrefabRemaps:
+    []
+  Name: TrippedStateManager
+  Enabled: true
+  ScriptAsset: !<reference> f1c07068-8ba1-4961-a8b5-f758f09e526e
+  ScriptInputsDefault:
+    debugColliders: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      unitRoot: !<reference.SceneObject> c53c6ddc-7a46-434a-915a-b9ce0bdf4d7b
+      rcd: !<MappingBased.AssignableType_1> cd16e420-3bb8-4032-8fd1-789f127629ab
+      breakers: !<MappingBased.AssignableType_2[]>
+        - !<reference> a4455220-6802-4754-97d8-8679f62ebe0b
+        - !<reference> b9c1ef7b-08e1-4fde-b1ab-6646c67dbbb4
+        - !<reference> fd3ad0aa-69ad-4c50-99d8-81fcebbb1368
+        - !<reference> 4aaa5ea6-41dd-4b14-a65f-490c6b44b920
+        - !<reference> cce2b28c-d79d-4162-a553-1ba483c57861
+        - !<reference> 3345714e-91e0-4e34-8768-3a87003e9cb1
+      dot: !<MappingBased.AssignableType_3> 9917a825-966f-4f30-997f-e7ff60c9cbf4
+      coachCard: !<MappingBased.AssignableType_4> 180a5800-aecf-4d42-850e-b8732834ff8e
+      resultCard: !<MappingBased.AssignableType_5> 8fc6c562-38aa-4908-8a4f-39742d2a56e9
+      safety: !<MappingBased.AssignableType_6> 9b9aea44-876d-4f0f-9c47-a6d58780cf32
+      audio: !<MappingBased.AssignableType_7> 2560ef20-81d6-4cfa-85ae-d78fe4bf2c3e
+      debugColliders: false
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/2dae2a27-8ce6-466a-8bff-622195c1b3a8>
   PrefabRemaps:
     []
@@ -710,6 +822,23 @@
     - !<own> a7da4af4-3d84-4acd-a31e-920a56b4c5c8
   Components:
     []
+- !<ScriptComponent/3345714e-91e0-4e34-8768-3a87003e9cb1>
+  PrefabRemaps:
+    []
+  Name: TrippedSwitch
+  Enabled: true
+  ScriptAsset: !<reference> fe3e21f7-8a81-42c6-8420-5c8b640b50b3
+  ScriptInputsDefault:
+    debugCollider: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      circuitName: Cooker
+      debugCollider: false
+  ScriptTypes:
+    "":
+      {}
 - !<RenderMeshVisual/335c5f8b-2917-49e8-8af5-220696e9bc09>
   PrefabRemaps:
     []
@@ -796,6 +925,21 @@
     - !<own> 4051028a-c608-4a97-b3d5-1a3912a7c007
   Components:
     []
+- !<SceneObject/39d0470c-983e-4d74-a082-378e4f6af3ee>
+  PrefabRemaps:
+    []
+  Name: TrippedAudio
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 2560ef20-81d6-4cfa-85ae-d78fe4bf2c3e
 - !<SceneObject/3a794764-c758-4d72-9d89-bf3ed978113f>
   PrefabRemaps:
     []
@@ -886,6 +1030,21 @@
     []
   Components:
     []
+- !<SceneObject/45807c39-4e27-43bc-a70b-714038b3be5e>
+  PrefabRemaps:
+    []
+  Name: Breaker_DownstairsLights
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: -3.600000, y: 0.000000, z: 1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 516f8ed6-1f13-4c74-9026-86c991bc15e3
+  Components:
+    - !<own> b9c1ef7b-08e1-4fde-b1ab-6646c67dbbb4
 - !<SceneObject/46b79537-a269-46f1-9483-500d7a4170d6>
   PrefabRemaps:
     []
@@ -916,6 +1075,23 @@
     - !<own> 8fe2a532-9bf3-4cde-b598-04ce5470718d
   Components:
     []
+- !<ScriptComponent/4aaa5ea6-41dd-4b14-a65f-490c6b44b920>
+  PrefabRemaps:
+    []
+  Name: TrippedSwitch
+  Enabled: true
+  ScriptAsset: !<reference> fe3e21f7-8a81-42c6-8420-5c8b640b50b3
+  ScriptInputsDefault:
+    debugCollider: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      circuitName: Upstairs sockets
+      debugCollider: false
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/4c195c04-c397-454e-bd08-3485f37d84fe>
   PrefabRemaps:
     []
@@ -946,6 +1122,21 @@
     []
   Components:
     - !<own> 5f153ad7-2baa-4fd9-a298-0dcfad86da3b
+- !<SceneObject/516f8ed6-1f13-4c74-9026-86c991bc15e3>
+  PrefabRemaps:
+    []
+  Name: Lever
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.600000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 2.400000, y: 4.500000, z: 1.200000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> d01ff0a8-9dd4-4c54-97b6-d4571f2f54ea
 - !<SceneObject/52ecefe4-5642-445a-ad16-52ce818076bc>
   PrefabRemaps:
     []
@@ -1015,6 +1206,21 @@
   ScriptTypes:
     "":
       {}
+- !<SceneObject/61d63b30-352c-4c11-bd62-29214e2d63a2>
+  PrefabRemaps:
+    []
+  Name: Lever
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.600000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 2.400000, y: 4.500000, z: 1.200000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> fbdde474-ac4d-4a48-82e6-7f75b5d77130
 - !<ScriptComponent/62967490-d66e-4479-8829-e5c9da5b5b57>
   PrefabRemaps:
     []
@@ -1141,6 +1347,26 @@
     - !<own> 80574bd1-697b-4bb5-b9ce-13b340146d82
   Components:
     - !<own> ccf4d3bc-d3c2-4580-b9c5-62f164ef7eef
+- !<RenderMeshVisual/6a66a774-750d-4e45-919b-ef9b04d53088>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 2c4b9321-d1a4-4ffd-90c4-537ad8ac2665
+  Mesh: !<reference> 7800bdcf-3e9e-4efd-8a04-1e75584e1afb
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
 - !<SceneObject/6a7a67db-5675-49bb-8f31-ba0588e3cffc>
   PrefabRemaps:
     []
@@ -1201,6 +1427,21 @@
     - !<own> 0e778a10-bd57-4a2a-b20a-b6f4326e8058
   Components:
     []
+- !<SceneObject/6c57a8b7-60e4-4501-8e86-7b28fcfa6aa5>
+  PrefabRemaps:
+    []
+  Name: DemoLabel
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: -10.500000, z: 2.200000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> f929ab08-0cfb-4cdf-a663-d146b27a0121
 - !<SceneObject/6dbaab8f-d98a-4f36-b836-1d7c8a0cca87>
   PrefabRemaps:
     []
@@ -1216,6 +1457,26 @@
     - !<own> 4c195c04-c397-454e-bd08-3485f37d84fe
   Components:
     []
+- !<RenderMeshVisual/6df63dec-7222-46ea-9c63-d1984ec85e26>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 27f5fa22-1a5d-4c42-9f85-886caa6c9ba3
+  Mesh: !<reference> 7800bdcf-3e9e-4efd-8a04-1e75584e1afb
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
 - !<SceneObject/7037a633-4899-4f2e-bc97-2e3f35395687>
   PrefabRemaps:
     []
@@ -1246,6 +1507,21 @@
     - !<own> 879ce45b-bd5e-40ff-a3fe-d821523427e4
   Components:
     - !<own> 64f27597-c99d-4c59-8a08-05459cc2258d
+- !<SceneObject/733e1d94-1333-43dd-998e-fbb7fe23b8c1>
+  PrefabRemaps:
+    []
+  Name: Breaker_KitchenSockets
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.800000, y: 0.000000, z: 1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> e32fcd73-98ee-464e-9b46-e49ab5911259
+  Components:
+    - !<own> fd3ad0aa-69ad-4c50-99d8-81fcebbb1368
 - !<SceneObject/74d13517-1dbf-42e6-b536-27afc4909c65>
   PrefabRemaps:
     []
@@ -1478,6 +1754,26 @@
     - !<own> 1fc7fa3e-6910-4741-b8a7-1b6660a39a9d
   Components:
     - !<own> 28e05826-1521-46fa-a54c-80f2957ec80c
+- !<RenderMeshVisual/8a0fbc7c-8e8e-47f1-a978-9b0f77b3f120>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 27f5fa22-1a5d-4c42-9f85-886caa6c9ba3
+  Mesh: !<reference> 7800bdcf-3e9e-4efd-8a04-1e75584e1afb
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
 - !<SceneObject/8b877074-7eee-4be1-b669-714f8d5a1da3>
   PrefabRemaps:
     []
@@ -1531,6 +1827,25 @@
     - !<own> b859e31c-4c76-46bd-bd6a-042228e52728
   Components:
     []
+- !<ScriptComponent/8fc6c562-38aa-4908-8a4f-39742d2a56e9>
+  PrefabRemaps:
+    []
+  Name: TrippedCardUI
+  Enabled: true
+  ScriptAsset: !<reference> 4cd60a7b-9d6e-4caf-aa87-8578474f2c41
+  ScriptInputsDefault:
+    cardWidth: true
+    textColor: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      actionIcon: !<reference.Texture> daed10af-1ddd-4b47-9e65-1d551fc5d46c
+      cardWidth: !<float> 0.000000
+      textColor: !<Vec4> {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/8fe2a532-9bf3-4cde-b598-04ce5470718d>
   PrefabRemaps:
     []
@@ -1546,6 +1861,36 @@
     - !<own> 8cb3dd13-6ebf-41e6-9a23-94a69dd96f87
   Components:
     []
+- !<SceneObject/92e72523-7805-4de7-a052-673e89793c19>
+  PrefabRemaps:
+    []
+  Name: Switch_RCD
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: -16.000000, y: 0.000000, z: 1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 943a24cb-59f0-4746-93c3-8910605510ed
+  Components:
+    - !<own> cd16e420-3bb8-4032-8fd1-789f127629ab
+- !<SceneObject/943a24cb-59f0-4746-93c3-8910605510ed>
+  PrefabRemaps:
+    []
+  Name: Lever
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.600000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 2.600000, y: 5.000000, z: 1.300000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 8a0fbc7c-8e8e-47f1-a978-9b0f77b3f120
 - !<SceneObject/9468c53c-f76f-49b7-8a49-b5ec6af1c5a3>
   PrefabRemaps:
     []
@@ -1562,6 +1907,21 @@
     - !<own> e9454e66-5d09-4a8a-bcd7-dea762326a48
   Components:
     []
+- !<SceneObject/94bee86f-a3d3-4c1a-a5bf-a3b5f0a5513b>
+  PrefabRemaps:
+    []
+  Name: SafetyUI
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: -26.000000, z: -73.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 9b9aea44-876d-4f0f-9c47-a6d58780cf32
 - !<SceneObject/988c408a-99dc-47e6-b7c4-efbf4bf8dc3c>
   PrefabRemaps:
     []
@@ -1577,6 +1937,42 @@
     - !<own> a4de4ce7-f468-4966-8a06-e29eea60c023
   Components:
     []
+- !<ScriptComponent/9917a825-966f-4f30-997f-e7ff60c9cbf4>
+  PrefabRemaps:
+    []
+  Name: TrippedDot
+  Enabled: true
+  ScriptAsset: !<reference> e23db248-fcba-42f8-b571-1549f418663f
+  ScriptInputsDefault:
+    baseSize: true
+    pulseSpeed: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      baseSize: 1.600000
+      pulseSpeed: !<float> 5.000000
+  ScriptTypes:
+    "":
+      {}
+- !<ScriptComponent/9b9aea44-876d-4f0f-9c47-a6d58780cf32>
+  PrefabRemaps:
+    []
+  Name: TrippedSafetyUI
+  Enabled: true
+  ScriptAsset: !<reference> 39126569-694c-400a-8788-f114b7548808
+  ScriptInputsDefault:
+    safetyLabel: true
+    accentColor: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      safetyLabel: "Smell burning / box hot?"
+      accentColor: !<Vec4> {x: 1.000000, y: 0.720000, z: 0.200000, w: 1.000000}
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/9c3a7929-faa9-4369-a85c-c75a6ab4eee7>
   PrefabRemaps:
     []
@@ -1608,6 +2004,26 @@
   ScriptTypes:
     "":
       {}
+- !<RenderMeshVisual/9d31c3aa-f5cf-4cd2-849f-7fe5d003807e>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 15e54361-53b6-4eaa-9ef3-401df76ecf16
+  Mesh: !<reference> 7800bdcf-3e9e-4efd-8a04-1e75584e1afb
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
 - !<SceneObject/9e373d68-993f-4c8f-83a0-6644f1d9fefd>
   PrefabRemaps:
     []
@@ -1638,6 +2054,23 @@
     - !<own> 46ea93d6-d161-4453-9064-6ac11e1d6523
   Components:
     []
+- !<ScriptComponent/a4455220-6802-4754-97d8-8679f62ebe0b>
+  PrefabRemaps:
+    []
+  Name: TrippedSwitch
+  Enabled: true
+  ScriptAsset: !<reference> fe3e21f7-8a81-42c6-8420-5c8b640b50b3
+  ScriptInputsDefault:
+    debugCollider: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      circuitName: Upstairs lights
+      debugCollider: false
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/a4b1ce71-4840-4493-bc52-58f3c13933e1>
   PrefabRemaps:
     []
@@ -1747,6 +2180,21 @@
     - !<own> 0c355300-e635-47c1-a8c3-5ddef30b8824
   Components:
     []
+- !<SceneObject/a8d0bff3-d59e-49c5-810f-b7ab459b47c3>
+  PrefabRemaps:
+    []
+  Name: TrippedStateManager
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 2aee000f-2e7d-4d19-92b7-2df06fdbdf58
 - !<SceneObject/a98a7d22-28b9-4357-97cd-1486e721ac5d>
   PrefabRemaps:
     []
@@ -1762,6 +2210,21 @@
     []
   Components:
     - !<own> 11c4bb09-7c38-4023-9802-74f9f28709a9
+- !<SceneObject/abdd40e3-3b42-4d0a-8335-82e434da9f63>
+  PrefabRemaps:
+    []
+  Name: Lever
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.600000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 2.400000, y: 4.500000, z: 1.200000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> f12301df-18df-4061-9be8-cf08da39c8ff
 - !<SceneObject/abfa4c71-3560-46f0-9471-90e212f21185>
   PrefabRemaps:
     []
@@ -1792,6 +2255,21 @@
     - !<own> 3de2c7ea-1525-465a-9056-68565a4014a7
   Components:
     []
+- !<SceneObject/b33c6684-ef2f-4060-a4a8-95f6d7c4eec6>
+  PrefabRemaps:
+    []
+  Name: UnitBody
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: -1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 40.000000, y: 25.000000, z: 3.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 6a66a774-750d-4e45-919b-ef9b04d53088
 - !<SceneObject/b463be13-dddb-4b36-a3dd-c344bd3d8ef5>
   PrefabRemaps:
     []
@@ -1822,6 +2300,21 @@
     - !<own> 23018601-1041-4785-a20e-9ad5ab722f95
   Components:
     []
+- !<SceneObject/b4866a28-8b20-4325-bb23-a889afec1fa8>
+  PrefabRemaps:
+    []
+  Name: Lever
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.600000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 2.400000, y: 4.500000, z: 1.200000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> bba8dd4c-2356-47e3-a4b0-2995c33ae369
 - !<SceneObject/b54dc8b5-dbcf-4fcc-a310-fb436127cc60>
   PrefabRemaps:
     []
@@ -1852,6 +2345,21 @@
     []
   Components:
     []
+- !<SceneObject/b7937dcb-9ee8-432f-92ba-05d597863de0>
+  PrefabRemaps:
+    []
+  Name: Rail
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.300000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 34.000000, y: 8.000000, z: 1.500000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 9d31c3aa-f5cf-4cd2-849f-7fe5d003807e
 - !<SceneObject/b859e31c-4c76-46bd-bd6a-042228e52728>
   PrefabRemaps:
     []
@@ -1882,6 +2390,23 @@
     - !<own> 11ac73c9-b802-4eb6-abf5-f73054ca7e20
   Components:
     []
+- !<ScriptComponent/b9c1ef7b-08e1-4fde-b1ab-6646c67dbbb4>
+  PrefabRemaps:
+    []
+  Name: TrippedSwitch
+  Enabled: true
+  ScriptAsset: !<reference> fe3e21f7-8a81-42c6-8420-5c8b640b50b3
+  ScriptInputsDefault:
+    debugCollider: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      circuitName: Downstairs lights
+      debugCollider: false
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/bb75b5ea-8baf-4d8d-bcf8-49bd79873881>
   PrefabRemaps:
     []
@@ -1912,6 +2437,26 @@
     - !<own> b786dabc-29e4-4cfa-8a84-f39604ffcbdd
   Components:
     []
+- !<RenderMeshVisual/bba8dd4c-2356-47e3-a4b0-2995c33ae369>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 27f5fa22-1a5d-4c42-9f85-886caa6c9ba3
+  Mesh: !<reference> 7800bdcf-3e9e-4efd-8a04-1e75584e1afb
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
 - !<SceneObject/bbcbfc17-8d65-4333-bce1-6f7239f690b8>
   PrefabRemaps:
     []
@@ -1942,6 +2487,21 @@
     - !<own> fe93d992-1114-4f1f-8bef-0a0bbd75747d
   Components:
     []
+- !<SceneObject/be5f7356-0460-4fc5-9292-822d3ece5a2a>
+  PrefabRemaps:
+    []
+  Name: Breaker_UpstairsLights
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: -8.000000, y: 0.000000, z: 1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> b4866a28-8b20-4325-bb23-a889afec1fa8
+  Components:
+    - !<own> a4455220-6802-4754-97d8-8679f62ebe0b
 - !<SceneObject/bf2095b6-c6f8-48c8-b840-e0a6cec0dc99>
   PrefabRemaps:
     []
@@ -1957,6 +2517,53 @@
     []
   Components:
     []
+- !<SceneObject/c53c6ddc-7a46-434a-915a-b9ce0bdf4d7b>
+  PrefabRemaps:
+    []
+  Name: TrippedUnit
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: -10.000000, z: -75.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> b33c6684-ef2f-4060-a4a8-95f6d7c4eec6
+    - !<own> b7937dcb-9ee8-432f-92ba-05d597863de0
+    - !<own> 92e72523-7805-4de7-a052-673e89793c19
+    - !<own> be5f7356-0460-4fc5-9292-822d3ece5a2a
+    - !<own> 45807c39-4e27-43bc-a70b-714038b3be5e
+    - !<own> 733e1d94-1333-43dd-998e-fbb7fe23b8c1
+    - !<own> 169e4830-99b6-4afd-9134-cbb498b7938b
+    - !<own> fa8f30fe-76c1-4d7c-8ede-da8a048b2524
+    - !<own> 21c1e7b7-6b08-4083-bacd-787bd3cc3ab1
+    - !<own> d977093b-96e7-4d51-b0d5-fc42bfe004ed
+    - !<own> d853b957-1257-43a7-bd03-fa8134b8965a
+    - !<own> d2342861-799e-453a-99a5-0ffe7286a0d5
+    - !<own> 6c57a8b7-60e4-4501-8e86-7b28fcfa6aa5
+  Components:
+    []
+- !<RenderMeshVisual/c5f7bd50-b0d5-42d2-94a1-a822e79f15ec>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> a6b3f5c7-f479-4b64-a49a-04387c886179
+  Mesh: !<reference> 47014174-bd8f-4457-ba74-29e0f79cfbd2
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
 - !<ScriptComponent/c8e031d3-a8a1-468a-a419-427f8556de4c>
   PrefabRemaps:
     []
@@ -2000,6 +2607,23 @@
     - !<own> 0a0e1d78-8246-4f5b-ab1a-fdc51837956d
   Components:
     []
+- !<ScriptComponent/cce2b28c-d79d-4162-a553-1ba483c57861>
+  PrefabRemaps:
+    []
+  Name: TrippedSwitch
+  Enabled: true
+  ScriptAsset: !<reference> fe3e21f7-8a81-42c6-8420-5c8b640b50b3
+  ScriptInputsDefault:
+    debugCollider: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      circuitName: Downstairs sockets
+      debugCollider: false
+  ScriptTypes:
+    "":
+      {}
 - !<Skin/ccf4d3bc-d3c2-4580-b9c5-62f164ef7eef>
   PrefabRemaps:
     []
@@ -2055,6 +2679,23 @@
     index-2: !<reference> 2dae2a27-8ce6-466a-8bff-622195c1b3a8
     thumb-3_end_end_end_end: !<reference> bf2095b6-c6f8-48c8-b840-e0a6cec0dc99
     wrist_to_pinky: !<reference> 3b4f5057-b516-4d3b-9c8d-14c81af2f505
+- !<ScriptComponent/cd16e420-3bb8-4032-8fd1-789f127629ab>
+  PrefabRemaps:
+    []
+  Name: TrippedSwitch
+  Enabled: true
+  ScriptAsset: !<reference> fe3e21f7-8a81-42c6-8420-5c8b640b50b3
+  ScriptInputsDefault:
+    debugCollider: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      circuitName: RCD
+      debugCollider: false
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/ce2213a1-7aa1-4201-a3c7-c2aaa06fd4ff>
   PrefabRemaps:
     []
@@ -2085,6 +2726,26 @@
     - !<own> 650dc0b4-8d22-4aab-87b4-d8e56fb59a67
   Components:
     - !<own> 0847d2bb-a13f-4c4a-a404-169f67308f6f
+- !<RenderMeshVisual/d01ff0a8-9dd4-4c54-97b6-d4571f2f54ea>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 27f5fa22-1a5d-4c42-9f85-886caa6c9ba3
+  Mesh: !<reference> 7800bdcf-3e9e-4efd-8a04-1e75584e1afb
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
 - !<SceneObject/d08269e3-acd4-4156-b5b9-477ca259611d>
   PrefabRemaps:
     []
@@ -2100,6 +2761,41 @@
     - !<own> bb9036be-541f-49e7-9554-c297d354da21
   Components:
     []
+- !<SceneObject/d2342861-799e-453a-99a5-0ffe7286a0d5>
+  PrefabRemaps:
+    []
+  Name: ResultCard
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 10.000000, z: 3.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 8fc6c562-38aa-4908-8a4f-39742d2a56e9
+- !<RenderMeshVisual/d3a04821-3354-4ab6-ad0f-0c53dabb3d0b>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 27f5fa22-1a5d-4c42-9f85-886caa6c9ba3
+  Mesh: !<reference> 7800bdcf-3e9e-4efd-8a04-1e75584e1afb
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
 - !<ScriptComponent/d3e2fbc5-8795-4913-9af6-c8626f8e6d9c>
   PrefabRemaps:
     []
@@ -2150,6 +2846,21 @@
     - !<own> bbcbfc17-8d65-4333-bce1-6f7239f690b8
   Components:
     []
+- !<SceneObject/d853b957-1257-43a7-bd03-fa8134b8965a>
+  PrefabRemaps:
+    []
+  Name: CoachCard
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 10.000000, z: 3.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 180a5800-aecf-4d42-850e-b8732834ff8e
 - !<SceneObject/d9071294-12e8-425f-98f1-bf308a02639e>
   PrefabRemaps:
     []
@@ -2180,6 +2891,22 @@
     - !<own> 74d13517-1dbf-42e6-b536-27afc4909c65
   Components:
     []
+- !<SceneObject/d977093b-96e7-4d51-b0d5-fc42bfe004ed>
+  PrefabRemaps:
+    []
+  Name: RcdDot
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: -16.000000, y: 5.500000, z: 2.200000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.600000, y: 1.600000, z: 1.600000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> c5f7bd50-b0d5-42d2-94a1-a822e79f15ec
+    - !<own> 9917a825-966f-4f30-997f-e7ff60c9cbf4
 - !<SceneObject/da214b27-43a7-4db4-90fd-993798e859d9>
   PrefabRemaps:
     []
@@ -2275,6 +3002,21 @@
     - !<own> 7e2075c6-0882-4275-8365-16a03da73298
   Components:
     []
+- !<SceneObject/e32fcd73-98ee-464e-9b46-e49ab5911259>
+  PrefabRemaps:
+    []
+  Name: Lever
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.600000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 2.400000, y: 4.500000, z: 1.200000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 6df63dec-7222-46ea-9c63-d1984ec85e26
 - !<SceneObject/e42bbb9f-e951-4432-be2e-3cc712b1fc33>
   PrefabRemaps:
     []
@@ -2368,6 +3110,26 @@
     []
   Components:
     []
+- !<RenderMeshVisual/f12301df-18df-4061-9be8-cf08da39c8ff>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 27f5fa22-1a5d-4c42-9f85-886caa6c9ba3
+  Mesh: !<reference> 7800bdcf-3e9e-4efd-8a04-1e75584e1afb
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
 - !<SceneObject/f36287fd-ed56-442d-ba20-78f9ef6f3502>
   PrefabRemaps:
     []
@@ -2575,6 +3337,80 @@
     - !<own> a7526b33-fca3-4f28-8e32-b0e9aa13c4b4
   Components:
     []
+- !<Text3D/f929ab08-0cfb-4cdf-a663-d146b27a0121>
+  PrefabRemaps:
+    []
+  Name: Text3D
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 7b786f31-22a3-4f69-ac71-d986b9e81cde
+  Text: "DEMO: fault on Kitchen sockets"
+  Editable: false
+  ShowEditingPreview: true
+  TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
+  EnableRichText: false
+  SizeToFit: false
+  FontSize: 20.000000
+  ExtrusionDepth: 0.400000
+  ExtrudeDirection: Both
+  FontSource: !<reference> 00000000-0000-0000-0000-000000000000
+  PreferredStyle: Regular
+  LayoutRect:
+    left: -7.500000
+    bottom: -2.250000
+    right: 7.500000
+    top: 2.250000
+  DebugRenderLayoutRect: false
+  OverflowVertical: Overflow
+  OverflowHorizontal: Overflow
+  AdvancedLayout: !<TextAdvancedLayout>
+    ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
+    LetterSpacing: 0.000000
+    LineSpacing: 1.000000
+    CapitalizationOverride: None
+  EnableBatching: false
+- !<SceneObject/fa8f30fe-76c1-4d7c-8ede-da8a048b2524>
+  PrefabRemaps:
+    []
+  Name: Breaker_DownstairsSockets
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 9.600000, y: 0.000000, z: 1.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 20f037f9-49de-437c-a972-cc22857ed2f3
+  Components:
+    - !<own> cce2b28c-d79d-4162-a553-1ba483c57861
+- !<RenderMeshVisual/fbdde474-ac4d-4a48-82e6-7f75b5d77130>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 27f5fa22-1a5d-4c42-9f85-886caa6c9ba3
+  Mesh: !<reference> 7800bdcf-3e9e-4efd-8a04-1e75584e1afb
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
 - !<SceneObject/fcc185fc-4e88-4e9e-9c71-40bd83b1b0ed>
   PrefabRemaps:
     []
@@ -2590,6 +3426,23 @@
     - !<own> 2dae2a27-8ce6-466a-8bff-622195c1b3a8
   Components:
     []
+- !<ScriptComponent/fd3ad0aa-69ad-4c50-99d8-81fcebbb1368>
+  PrefabRemaps:
+    []
+  Name: TrippedSwitch
+  Enabled: true
+  ScriptAsset: !<reference> fe3e21f7-8a81-42c6-8420-5c8b640b50b3
+  ScriptInputsDefault:
+    debugCollider: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      circuitName: Kitchen sockets
+      debugCollider: false
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/fe93d992-1114-4f1f-8bef-0a0bbd75747d>
   PrefabRemaps:
     []
