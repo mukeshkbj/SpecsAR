@@ -43,6 +43,7 @@ export class TrippedSwitch extends BaseScriptComponent {
   private _isOn = true
   private mode: SwitchMode = "normal"
   private hovered = false
+  private leverBasePos: vec3 | null = null
 
   private _onToggle = new Event<TrippedSwitch>()
   get onToggle(): PublicApi<TrippedSwitch> { return this._onToggle.publicApi() }
@@ -52,12 +53,15 @@ export class TrippedSwitch extends BaseScriptComponent {
     if (root.getChildrenCount() > 0) {
       this.lever = root.getChild(0)
       this.leverVisual = this.lever.getComponent("Component.RenderMeshVisual") as RenderMeshVisual
+      this.leverBasePos = this.lever.getTransform().getLocalPosition()
     }
 
     // Collider + Interactable for pinch targeting (runtime plumbing, not authored visuals).
     const collider = root.createComponent("Physics.ColliderComponent") as ColliderComponent
     const shape = Shape.createBoxShape()
-    shape.size = new vec3(4.0, 6.5, 3.5)
+    // 3.4 cm wide fits the tighter 3.5 cm switch pitch without colliders overlapping
+    // (overlapping hit-zones let a pinch land on the wrong breaker).
+    shape.size = new vec3(3.4, 6.5, 3.5)
     collider.shape = shape
     collider.debugDrawEnabled = this.debugCollider
 
@@ -92,6 +96,12 @@ export class TrippedSwitch extends BaseScriptComponent {
     if (!this.lever) return
     const angle = this._isOn ? TILT_ON : TILT_OFF
     this.lever.getTransform().setLocalRotation(quat.fromEulerAngles(angle, 0, 0))
+    // Make on/off readable from the front: an OFF lever drops ~1.5 cm, like a real breaker.
+    if (this.leverBasePos) {
+      const b = this.leverBasePos
+      this.lever.getTransform().setLocalPosition(new vec3(b.x, this._isOn ? b.y : b.y - 1.5, b.z))
+    }
+    this.applyVisual()
   }
 
   private applyVisual(): void {
@@ -101,6 +111,8 @@ export class TrippedSwitch extends BaseScriptComponent {
     else if (this.mode === "dim") mat = MAT_DIM
     else if (this.mode === "amber") mat = MAT_AMBER
     // Hover brightens anything that is not the locked amber culprit.
+    // An OFF breaker in normal mode reads dim, so on/off is obvious from the front.
+    if (this.mode === "normal" && !this._isOn) mat = MAT_DIM
     if (this.hovered && this.mode !== "amber") mat = MAT_HOVER
     this.leverVisual.mainMaterial = mat
   }
